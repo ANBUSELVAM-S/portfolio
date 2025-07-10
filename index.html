@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      font-family: sans-serif;
+    }
+
+    .nav {
+      background-color: #000000;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 50px;
+      border: 7px solid;
+      border-color: rgb(249, 249, 255);
+      margin: 2rem auto;
+      max-width: 50%;
+
+      
+    }
+
+    .nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0.5rem 1rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: rgb(255, 255, 255);
+      transition: 0.3s ease;
+      transform: translateX(-35%);
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    .name {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .name h1, .name h2 {
+      font-size: 5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .words {
+      color: blue;
+      margin-top: 1rem;
+      width: 20rem;
+      height: 2rem;
+      padding-left: 5rem;
+      font-size: 2rem;
+    }
+
+    .name img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 30px;
+    }
+
+    .but {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+      margin-left: 7rem;
+      
+      
+    }
+    .am{
+      text-decoration: none;
+      color: white;
+    }
+
+    button {
+      background-color: #0e218e;
+      color: white;
+      border: 3px solid #084c9f;
+      border-radius: 8px;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+    }
+    button:a{
+
+    }
+
+    button:hover {
+      box-shadow: 0 0 5px rgb(0,140,255),
+                  0 0 25px rgb(0,140,255),
+                  0 0 50px rgb(0,140,255),
+                  0 0 100px rgb(0,140,255);
+    }
+
+    .sk {
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+      margin-top: 4rem;
+    }
+    .ab {
+  background-color: black;
+  color: white;
+  max-width: 90%;
+  width: 800px;
+  height: 25rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.ab h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.para {
+  font-size: 1.1rem;
+  font-weight: normal;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 600px) {
+  .ab {
+    padding: 1.2rem;
+  }
+
+  .ab h1 {
+    font-size: 1.5rem;
+  }
+
+  .para {
+    font-size: 1rem;
+  }
+}
+
+
+    .container {
+      max-width: 100%;
+      margin: 2rem auto;
+     background: linear-gradient(#212121, #212121) padding-box,
+                  linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .skill-box {
+      margin: 1.5rem 0;
+    }
+
+    .skill-box .title {
+      font-size: 1.5rem;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .skill-bar {
+      background: rgb(255, 255, 255);
+      height: 1rem;
+      color: rgb(255, 255, 255);
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+
+    .skill-per {
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  background: #198dd4; /* Blue color */
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+
+    .skill-per.html { width: 100%; animation-delay: 0.1s; }
+    .skill-per.css { width: 90%; animation-delay: 0.2s; }
+    .skill-per.javascript { width: 80%; animation-delay: 0.3s;}
+    .skill-per.nodejs { width: 70%; animation-delay: 0.4s; }
+
+    
+   
+
+
+
+    @keyframes progress {
+      0% { width: 0; opacity: 1; }
+      100% { opacity: 1; }
+    }
+
+    @media (min-width: 768px) {
+      .name {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .but {
+        justify-content: flex-start;
+      }
+
+      .name h1, .name h2 {
+        text-align: left;
+      }
+    }
+    html {
+  scroll-behavior: smooth;
+    }
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .con {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem auto;
+      color: white;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      background: linear-gradient(#212121, #212121) padding-box,
+                  linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+      border: 2px solid transparent;
+      padding: 32px 24px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group label {
+      color: #717171;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid #414141;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      opacity: 0.5;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #e81cff;
+    }
+
+    .form-submit-btn {
+      align-self: center;
+      width: 50%;
+      background: #313131;
+      border: 1px solid #414141;
+      padding: 12px 16px;
+      color: #717171;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .form-submit-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+   /* From Uiverse.io by aadium */ 
+   body {
+  background-color: #000000;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+  .social-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+
+  /* Make it responsive */
+  width: 100%;
+  max-width: 400px; /* Optional max width */
+  margin: 0 auto;    /* Center it horizontally */
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .social-buttons {
+    gap: 10px;
+    padding: 15px;
+  }
+}
+
+
+.social-button {
+  width: 55px;
+  height: 55px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+  text-decoration: none;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+  background-color: #333333;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  color: #ffffff;
+}
+
+.icon-img {
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .social-button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon,
+  .icon-img {
+    width: 22px;
+    height: 22px;
+  }
+}
+  .social-button.github {
+  background-color: #333; /* GitHub gray */
+}
+
+.social-button.linkedin {
+  background-color: #0A66C2; /* LinkedIn blue */
+}
+
+.social-button.leetcode {
+  background-color: #FFA116; /* LeetCode orange */
+}
+
+.social-button.email {
+  background-color: #D44638; /* Gmail red */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+  height: 4rem;
+  width: 25rem;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 0;
+}
+
+.word {
+  display: block;
+  height: 120%;
+  padding-left: 2px;
+  color: blue;
+  font-size: 3rem;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 50rem;
+  font-family: "Poppins", sans-serif;
+  width: 40%;
+  max-width: 450px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #000000;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   margin: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  padding: 1%;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.wrapper .email:hover,
+.wrapper .email:hover .tooltip,
+.wrapper .email:hover .tooltip::before {
+  background: #EA4335; /* Gmail red */
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+/* Make wrapper responsive */
+
+
+/* Adjust icon layout on smaller screens */
+
+
+/* Responsive tooltip spacing */
+
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 10px;
+    width: 95%;
+  }
+
+  .wrapper .icon {
+    width: 45px;
+    height: 45px;
+    margin: 8px;
+    font-size: 16px;
+  }
+
+  .wrapper .tooltip {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+/* Optional for tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .wrapper {
+    max-width: 600px;
+  }
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <a href="#">Home</a>
+    <a href="#skill">Skill</a>
+    <a href="#">Project</a>
+    <a href="file:///C:/Users/Anbu/Desktop/ANBU%20(1).pdf" download="My_Resume.pdf">Resume</a>
+    
+    <a href="#con">Contact me</a>
+  </div>
+
+  <div class="name">
+    <div>
+      <h1>I am Anbu</h1>
+      <div class="words">
+      <span class="word">Coder</span>
+      <span class="word">Developer</span>
+      <span class="word">Designer</span>
+      <span class="word">Selvam</span>
+      <span class="word">Creator</span>
+
+    </div>
+      <div class="but">
+        <button><a href="#ab" class="am">About me</a></button>
+      </div>
+    </div>
+    <img src="unnamed.webp" alt="Profile">
+  </div>
+  <div id="ab" class="ab">
+    <h1>About me</h1>
+    <p class="para">
+      Hello! I'm a passionate and detail-oriented developer with a strong interest in building efficient, scalable, and user-friendly web applications. I enjoy turning complex problems into simple, elegant solutions with clean and maintainable code.
+      With experience in front-end and back-end development, I love working on full-stack projects that bring real-world impact. I'm constantly learning new technologies and improving my skills to stay current in the fast-evolving tech landscape.
+    </p>
+    <div class="social-buttons">
+  <!-- GitHub -->
+  <a href="https://github.com/" class="social-button github" title="GitHub" target="_blank">
+    <svg class="icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 .198a8 8 0 00-2.534 15.591c.4.073.547-.174.547-.386v-1.33c-2.226.484-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.726-.497.055-.487.055-.487.803.056 1.225.825 1.225.825.714 1.223 1.872.87 2.327.665.072-.517.28-.87.51-1.07-1.776-.2-3.644-.888-3.644-3.954 0-.874.31-1.59.824-2.15-.083-.202-.357-1.016.078-2.118 0 0 .67-.214 2.2.82a7.63 7.63 0 012.003-.269 7.63 7.63 0 012.003.269c1.53-1.034 2.2-.82 2.2-.82.436 1.102.162 1.916.08 2.118.513.56.823 1.276.823 2.15 0 3.074-1.87 3.752-3.652 3.95.288.25.544.733.544 1.48v2.194c0 .215.144.463.55.384A8.001 8.001 0 008 .198z"/>
+    </svg>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/anbu-selvam-s-80b727307/" class="social-button linkedin" title="LinkedIn" target="_blank">
+    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.983 3.5C4.983 4.88 3.878 6 2.49 6S0 4.88 0 3.5 1.105 1 2.49 1s2.493 1.12 2.493 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.18h.07c.65-1.24 2.24-2.53 4.6-2.53C21.41 7.65 24 10.01 24 15v9h-5v-8.35c0-2-.71-3.36-2.49-3.36-1.36 0-2.17.92-2.53 1.8-.13.32-.17.76-.17 1.2V24h-5V8z"/>
+    </svg>
+  </a>
+
+  <!-- LeetCode -->
+  <a href="https://leetcode.com/u/anbu-sk/" class="social-button leetcode" title="LeetCode" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="icon-img" />
+  </a>
+  </div>
+  <h2 id="skill" class="sk">Skill</h2>
+
+  <div class="container">
+    <div class="skill-box">
+      <span class="title">C</span>
+      <div class="skill-bar">
+        <span class="skill-per html">
+          <span class="tooltip">100%</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <span class="title">UI/UX</span>
+      <div class="skill-bar">
+        <span class="skill-per css">
+          <span class="tooltip">90%</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <span class="title">JavaScript</span>
+      <div class="skill-bar">
+        <span class="skill-per javascript">
+          <span class="tooltip">80%</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="skill-box">
+      <span class="title">Java</span>
+      <div class="skill-bar">
+        <span class="skill-per nodejs">
+          <span class="tooltip">70%</span>
+        </span>
+      </div>
+    </div>
+    <div class="skill-box">
+      <span class="title">C</span>
+      <div class="skill-bar">
+        <span class="skill-per nodejs">
+          <span class="tooltip">70%</span>
+        </span>
+      </div>
+    </div>
+  </div>
+   <div id="con"  class="con">Contact me</div>
+
+  <div class="form-container">
+    <form class="form">
+      <div class="form-group">
+        <label for="email">Enter your Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+      </div>
+      <div class="form-group">
+        <label for="textarea">How Can We Help You?</label>
+        <textarea name="textarea" id="textarea" rows="4" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button class="form-submit-btn" type="submit">Submit</button>
+    </form>
+  </div>
+<ul class="wrapper">
+  <!-- LinkedIn (was Facebook) -->
+  <li class="icon linkedin">
+    <span class="tooltip">LinkedIn</span>
+    <svg
+      viewBox="0 0 448 512"
+      height="1.2em"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M100.28 448H7.4V148.9h92.88zm-46.44-340.7C24.33 107.3 0 83 0 52.69 0 23.59 23.63 0 52.68 0c29.36 0 53.32 23.59 53.32 52.68 0 30.29-24.33 54.62-52.16 54.62zM447.9 448h-92.4V302.4c0-34.7-12.4-58.4-43.3-58.4-23.6 0-37.6 15.9-43.8 31.2-2.3 5.6-2.9 13.3-2.9 21.1V448h-92.5s1.2-269.6 0-297.1h92.5v42.1c12.3-19 34.2-46.1 83.4-46.1 60.9 0 106.5 39.8 106.5 125.2V448z"
+      />
+    </svg>
+  </li>
+
+  <!-- Email (was Twitter) -->
+  <li class="icon email">
+    <span class="tooltip">Email</span>
+    <svg
+      viewBox="0 0 512 512"
+      height="1.2em"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M502.3 190.8 327.4 338.5c-15.9 13.5-39.8 13.5-55.7 0L9.7 190.8C3.9 186.1 0 179 0 171.3V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v91.3c0 7.7-3.9 14.8-9.7 19.5zM0 248.2v183.8c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V248.2L327.4 395.9c-31.9 27.1-78.8 27.1-110.6 0L0 248.2z"
+      />
+    </svg>
+  </li>
+
+  <!-- Instagram (unchanged) -->
+  <li class="icon instagram">
+    <span class="tooltip">Instagram</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1.2em"
+      fill="currentColor"
+      class="bi bi-instagram"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+      ></path>
+    </svg>
+  </li>
+</ul>
+
+
+</body>
+</html>
