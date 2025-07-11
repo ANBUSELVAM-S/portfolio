@@ -87,18 +87,44 @@
     }
 
     .but {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 3rem;
-      margin-left: 7rem;
-      
-      
-    }
-    .am{
-      text-decoration: none;
-      color: white;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.am {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding-left: 10rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.k{
+  margin-left: 2rem;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .but {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+
+  .am {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
 
     button {
       background-color: #0e218e;
@@ -131,9 +157,9 @@
     .ab {
   background-color: black;
   color: white;
-  max-width: 90%;
-  width: 800px;
-  height: 25rem;
+  width: 100%;
+  max-width: 50%;
+  height: auto;
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 10px;
@@ -141,40 +167,92 @@
               linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
   border: 2px solid transparent;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .ab h1 {
-  color: #ffffff;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+}
+
+.section-title {
+  padding-top: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #e81cff;
 }
 
 .para {
   font-size: 1.1rem;
-  font-weight: normal;
   line-height: 1.8;
   text-align: justify;
+  margin-bottom: 1.5rem;
 }
 
-/* Responsive tweak for small screens */
-@media (max-width: 600px) {
+.edu-block {
+  margin-top: 1.5rem;
+}
+
+.edu-block h2 {
+  font-size: 1.3rem;
+  color: #40c9ff;
+}
+
+
+.edu-line.short {
+  width: 15em;
+}
+
+.edu-line.long {
+  width: 5em;
+}
+
+.hs {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .ab {
     padding: 1.2rem;
   }
 
   .ab h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-title {
     font-size: 1.5rem;
   }
 
   .para {
     font-size: 1rem;
   }
+
+  .edu-block h2 {
+    font-size: 1.1rem;
+  }
+
+  .hs {
+    font-size: 0.95rem;
+  }
+
+  .edu-line.short {
+    width: 12em;
+  }
+
+  .edu-line.long {
+    width: 18em;
+  }
 }
 
 
     .container {
-      max-width: 100%;
+      max-width: 50%;
       margin: 2rem auto;
      background: linear-gradient(#212121, #212121) padding-box,
                   linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
@@ -270,7 +348,7 @@
     }
 
     .form-container {
-      width: 100%;
+      width: 50%;
       max-width: 700px;
       margin: auto;
       background: linear-gradient(#212121, #212121) padding-box,
@@ -366,63 +444,7 @@
 }
 
 
-.social-button {
-  width: 55px;
-  height: 55px;
-  background-color: #1a1a1a;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s, background-color 0.3s;
-  text-decoration: none;
-}
 
-.social-button:hover {
-  transform: scale(1.1);
-  background-color: #333333;
-}
-
-.icon {
-  width: 26px;
-  height: 26px;
-  color: #ffffff;
-}
-
-.icon-img {
-  width: 26px;
-  height: 26px;
-  filter: invert(1);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  .social-button {
-    width: 45px;
-    height: 45px;
-  }
-
-  .icon,
-  .icon-img {
-    width: 22px;
-    height: 22px;
-  }
-}
-  .social-button.github {
-  background-color: #333; /* GitHub gray */
-}
-
-.social-button.linkedin {
-  background-color: #0A66C2; /* LinkedIn blue */
-}
-
-.social-button.leetcode {
-  background-color: #FFA116; /* LeetCode orange */
-}
-
-.social-button.email {
-  background-color: #D44638; /* Gmail red */
-}
 html {
   scroll-behavior: smooth;
 }
@@ -630,6 +652,19 @@ html {
     max-width: 600px;
   }
 }
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333;
+  color: #fff;
+}
+
+.wrapper .leetcode:hover,
+.wrapper .leetcode:hover .tooltip,
+.wrapper .leetcode:hover .tooltip::before {
+  background: #f89f1b;
+  color: #fff;
+}
 
 
 
@@ -642,9 +677,9 @@ html {
     <a href="#">Home</a>
     <a href="#skill">Skill</a>
     <a href="#">Project</a>
-    <a href="file:///C:/Users/Anbu/Desktop/ANBU%20(1).pdf" download="My_Resume.pdf">Resume</a>
-    
     <a href="#con">Contact me</a>
+    <a href="file:///C:/Users/Anbu/Desktop/ANBU%20(1).pdf" download="My_Resume.pdf" style="color: #1f04b6;">Resume</a>
+    
   </div>
 
   <div class="name">
@@ -659,37 +694,36 @@ html {
 
     </div>
       <div class="but">
-        <button><a href="#ab" class="am">About me</a></button>
+        <button class="k"><a href="#ab" class="am">About me</a></button>
       </div>
     </div>
     <img src="unnamed.webp" alt="Profile">
   </div>
-  <div id="ab" class="ab">
-    <h1>About me</h1>
-    <p class="para">
-      Hello! I'm a passionate and detail-oriented developer with a strong interest in building efficient, scalable, and user-friendly web applications. I enjoy turning complex problems into simple, elegant solutions with clean and maintainable code.
-      With experience in front-end and back-end development, I love working on full-stack projects that bring real-world impact. I'm constantly learning new technologies and improving my skills to stay current in the fast-evolving tech landscape.
+ <div class="ab" id="ab">
+  <h1>About Me</h1>
+  <p class="para">
+    Hello! I'm a passionate and detail-oriented developer with a strong interest in building efficient, scalable, and user-friendly web applications. I enjoy turning complex problems into simple, elegant solutions with clean and maintainable code.
+    With experience in front-end and back-end development, I love working on full-stack projects that bring real-world impact. I'm constantly learning new technologies and improving my skills to stay current in the fast-evolving tech landscape.
+  </p>
+
+  <h1 class="section-title">Education</h1>
+
+  <div class="edu-block">
+    <h2>Bachelor of Engineering:</h2>
+    <p class="hs">
+      B.E, Department of Computer Science (2023-2027)<br>
+      Bannari Amman Institute of Technology, Sathyamangalam, Erode(Dt).
     </p>
-    <div class="social-buttons">
-  <!-- GitHub -->
-  <a href="https://github.com/" class="social-button github" title="GitHub" target="_blank">
-    <svg class="icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 .198a8 8 0 00-2.534 15.591c.4.073.547-.174.547-.386v-1.33c-2.226.484-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.726-.497.055-.487.055-.487.803.056 1.225.825 1.225.825.714 1.223 1.872.87 2.327.665.072-.517.28-.87.51-1.07-1.776-.2-3.644-.888-3.644-3.954 0-.874.31-1.59.824-2.15-.083-.202-.357-1.016.078-2.118 0 0 .67-.214 2.2.82a7.63 7.63 0 012.003-.269 7.63 7.63 0 012.003.269c1.53-1.034 2.2-.82 2.2-.82.436 1.102.162 1.916.08 2.118.513.56.823 1.276.823 2.15 0 3.074-1.87 3.752-3.652 3.95.288.25.544.733.544 1.48v2.194c0 .215.144.463.55.384A8.001 8.001 0 008 .198z"/>
-    </svg>
-  </a>
-
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/anbu-selvam-s-80b727307/" class="social-button linkedin" title="LinkedIn" target="_blank">
-    <svg class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4.983 3.5C4.983 4.88 3.878 6 2.49 6S0 4.88 0 3.5 1.105 1 2.49 1s2.493 1.12 2.493 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.18h.07c.65-1.24 2.24-2.53 4.6-2.53C21.41 7.65 24 10.01 24 15v9h-5v-8.35c0-2-.71-3.36-2.49-3.36-1.36 0-2.17.92-2.53 1.8-.13.32-.17.76-.17 1.2V24h-5V8z"/>
-    </svg>
-  </a>
-
-  <!-- LeetCode -->
-  <a href="https://leetcode.com/u/anbu-sk/" class="social-button leetcode" title="LeetCode" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="icon-img" />
-  </a>
   </div>
+
+  <div class="edu-block">
+    <h2>Higher Education:</h2>
+    <p class="hs">
+      Seventh-day Adventist Matriculation Higher Secondary School, Sivaganga(Dt)
+    </p>
+  </div>
+</div>
+
   <h2 id="skill" class="sk">Skill</h2>
 
   <div class="container">
@@ -782,6 +816,7 @@ html {
       />
     </svg>
   </li>
+  
 
   <!-- Instagram (unchanged) -->
   <li class="icon instagram">
@@ -796,6 +831,31 @@ html {
       <path
         d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
       ></path>
+    </svg>
+  </li>
+  <li class="icon github">
+    <span class="tooltip">GitHub</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1.5em"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 0.5C5.37 0.5 0 5.87 0 12.5C0 17.89 3.438 22.39 8.205 23.98C8.805 24.09 9.025 23.73 9.025 23.42C9.025 23.14 9.015 22.38 9.01 21.47C5.672 22.15 4.968 19.64 4.968 19.64C4.422 18.17 3.633 17.77 3.633 17.77C2.546 17.02 3.714 17.04 3.714 17.04C4.922 17.12 5.554 18.29 5.554 18.29C6.624 20.14 8.388 19.62 9.048 19.32C9.148 18.55 9.455 18.03 9.79 17.74C7.12 17.45 4.343 16.36 4.343 11.66C4.343 10.33 4.79 9.25 5.554 8.41C5.436 8.11 5.062 6.84 5.664 5.15C5.664 5.15 6.664 4.83 8.994 6.44C9.944 6.18 10.964 6.06 11.985 6.06C13.006 6.06 14.026 6.18 14.976 6.44C17.306 4.83 18.306 5.15 18.306 5.15C18.908 6.84 18.534 8.11 18.416 8.41C19.18 9.25 19.627 10.33 19.627 11.66C19.627 16.38 16.842 17.44 14.163 17.73C14.598 18.11 14.973 18.86 14.973 20.01C14.973 21.65 14.958 22.98 14.958 23.42C14.958 23.73 15.178 24.1 15.788 23.98C20.555 22.39 24 17.89 24 12.5C24 5.87 18.63 0.5 12 0.5Z"
+      />
+    </svg>
+  </li>
+
+  <li class="icon leetcode">
+    <span class="tooltip">LeetCode</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 1024 1024"
+      height="1.5em"
+    >
+      <path d="M632.1 169.4c18.1-18.5 35.7-37.5 54.3-55.6 41.9-40.3 99.2-41.3 138.2-2.4 39 38.9 37.8 96.4-2.9 138.8-67.5 68.7-135.2 137.1-202.9 205.3-94.6 95.5-189.2 191.1-284.2 286.3-30.2 30.1-74.4 33.2-109.8 8.1-32.9-23.3-46.5-66.7-32.1-102.9 7.1-17.7 19.4-33.4 32.2-48 48.6-56 99-110.2 148.5-165.3 11.8-13.1 12.7-17.4.6-31-17.3-19.9-33.9-40.4-49.6-61.2-9.9-12.9-20.2-25.6-27.8-39.7-19.8-37.2-9.7-83.3 23.4-112.5 32.2-28.3 77.9-30.4 116.2-5.2 20.8 13.9 37.8 33.2 53.3 52.5 22.5 27.4 40.2 58.1 63.2 90.4l95.4-95.4c6.8-6.9 14-13.4 20.6-20.2z" />
     </svg>
   </li>
 </ul>
