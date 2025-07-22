@@ -118,7 +118,7 @@ function App() {
           </p>
         </div>
         <div className="github-button-container">
-          <a href='https://github.com/ANBUSELVAM-S/portfolio.git' style={{color:'white'}}><button className="github-button">
+          <a href='https://github.com/ANBUSELVAM-S/portfolio.git' style={{color:'white',textDecoration:'none'}}><button className="github-button">
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
@@ -146,7 +146,7 @@ function App() {
           </p>
         </div>
         <div className="github-button-container">
-          <a href='#' style={{color:'white'}}><button className="github-button">
+          <a href='#' style={{color:'white',textDecoration:'none'}}><button className="github-button">
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
