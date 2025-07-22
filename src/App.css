@@ -766,9 +766,12 @@ li::before {
   display: inline-block;
   background-color: #1f04b6;
   color: white;
-  padding: 10px 20px;
+  width: 7rem;
+  height: 2rem;
+  padding-top:0.5rem;
   border-radius: 5px;
   text-align: center;
+ margin: 1rem;
 }
 /* project section */
 .about-container {

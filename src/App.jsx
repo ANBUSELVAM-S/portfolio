@@ -28,7 +28,7 @@ function App() {
         <a href="#skill">Skill</a>
         <a href="#project">Project</a>
         <a href="#con">Contact Me</a>
-        <a href={resume} download="resume.pdf" className='do'> Resume</a>
+        <a href={resume} download="resume.pdf" className='do' > Resume</a>
       </div>
     </div>
 
