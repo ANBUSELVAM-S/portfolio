@@ -655,9 +655,9 @@ li::before {
 }
 
 /* Small screen tweaks */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .card {
-    max-width: 85%;
+    max-width: 75%;
     padding: 20px;
   }
 
