@@ -65,14 +65,17 @@ function App() {
           <h2>Bachelor of Engineering:</h2>
           <p className="hs">
             B.E, Department of Computer Science (2023-2027)<br />
-            Bannari Amman Institute of Technology, Sathyamangalam, Erode(Dt).
+            Bannari Amman Institute of Technology, Sathyamangalam, Erode(Dt).<br/>
+            CCPA : 7.5
+
           </p>
         </div>
 
         <div className="edu-block">
           <h2>Higher Education:</h2>
           <p className="hs">
-            Seventh-day Adventist Matriculation Higher Secondary School, Sivaganga(Dt)
+            Seventh-day Adventist Matriculation Higher Secondary School, Sivaganga(Dt).<br/>
+            Grade : 81.3%.
           </p>
         </div>
       </div>
@@ -121,7 +124,7 @@ function App() {
           </p>
         </div>
         <div className="github-button-container">
-          <a href='https://github.com/ANBUSELVAM-S/portfolio.git' style={{color:'white',textDecoration:'none'}}><button className="github-button"style={{backgroundColor:'blue',}}>
+          <a href='https://github.com/ANBUSELVAM-S/portfolio.git' style={{color:'white',textDecoration:'none'}}><button className="github-button">
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
@@ -149,7 +152,7 @@ function App() {
           </p>
         </div>
         <div className="github-button-container">
-          <a href='#' style={{color:'white',textDecoration:'none'}}><button className="github-button" style={{backgroundColor:'blue '}}>
+          <a href='#' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
@@ -166,24 +169,32 @@ function App() {
      <h1 id="ac" className="sk">Acheivement</h1>
      <div className="about-container" id="about">
       <div className="project-card">
+        <h2 style={{textAlign:'center',paddingBottom:'15px',color:' #40c9ff'}}>Ideathon</h2>
+        <div className="project-content">
+        
           <p className="project-description">
 I was awarded a Certificate of Participation by Bannari Amman Institute of Technology for actively contributing to IDEATHON '24, organized by BIT - Special Labs. During the event, I presented an innovative idea titled "Birthday Reminder", showcasing creativity and problem-solving skills. The event, held on 17th April 2024, provided a great platform to explore ideas, collaborate, and gain valuable exposure in the field of technology and innovation.          </p>
         </div>
         <div className="github-button-container">
           <a href={idea} style={{color:'white',textDecoration:'none'}}><button className="github-button" style={{backgroundColor:'blue'}}>
-            Download
+            View Certifitate
           </button></a>
         </div>
+        </div>
         <div className="project-card">
+          <h2 style={{textAlign:'center',paddingBottom:'15px',color:' #40c9ff'}}>National Conference on Recent Advances in Design and Digital Multimedia – NCRADDM 2023</h2>
+          <div className="project-content">
           <p className="project-description">
 I received a Certificate of Participation from Bannari Amman Institute of Technology for presenting a paper titled "Gaming and Animation" at the National Conference on Recent Advances in Design and Digital Multimedia – NCRADDM 2023. The event was organized by the Department of Computer Science and Design and held on 22nd December 2023. This conference provided a valuable opportunity to showcase research work and gain insights into emerging trends in digital multimedia and design technologies.</p>
         </div>
         <div className="github-button-container">
           <a href={gaming} style={{color:'white',textDecoration:'none'}}><button className="github-button" style={{backgroundColor:'blue'}}>
-            Download
+            View Certifitate
           </button></a>
         </div>
+        </div>
       </div>
+      
      
   
       <div id="con" className="con">Contact me</div>
