@@ -617,9 +617,9 @@ html {
   max-width: 600px;
   width: 100%;
   max-width: 50%;
-  border: 2px solid transparent;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
+  background: linear-gradient(#212121, #212121) padding-box;
+      border: 2px solid transparent;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   
   margin: auto;
   margin-top: 1rem;
