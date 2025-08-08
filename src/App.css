@@ -28,6 +28,7 @@
       font-size: 1rem;
       margin: 0.5rem 1rem;
       position: relative;
+      font-family: "Poppins", sans-serif;
       
     }
 
@@ -726,6 +727,7 @@ li::before {
 
 .nav-links {
   display: flex;
+  
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;

@@ -197,7 +197,7 @@ I received a Certificate of Participation from Bannari Amman Institute of Techno
       
      
   
-      <div id="con" className="con">Contact me</div>
+      <h1 id="con" className="con">Contact me</h1>
 
       <div className="form-container">
         <form className="form" action="https://formspree.io/f/xyzpklqb" method="POST">  
