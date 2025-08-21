@@ -4,7 +4,7 @@ import './App.css';
 import './App.js';
 import profilePic from './assets/anbu.jpg';
 import projectpic from './assets/image1.png';
-import projectpic1 from './assets/image.png';
+import projectpic1 from './assets/img.png';
 import upcoming from './assets/image.jpeg';
 import resume from './assets/resume.pdf';
 import idea from './assets/ideathon.jpg';
