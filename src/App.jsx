@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import './App.css'; 
 import './App.js';
 import profilePic from './assets/anbu.jpg';
-import projectpic from './assets/image.png';
+import projectpic from './assets/image1.png';
+import projectpic1 from './assets/image.png';
 import upcoming from './assets/image.jpeg';
 import resume from './assets/resume.pdf';
 import idea from './assets/ideathon.jpg';
@@ -142,17 +143,14 @@ function App() {
         <div className="project-content">
           <img
             className="project-image"
-            src={upcoming}
+            src={projectpic1}
             alt="Project"
           />
           <p className="project-description">
-            Hello! I'm a passionate and detail-oriented developer with a strong interest in building efficient, scalable,
-            and user-friendly web applications. I enjoy turning complex problems into simple, elegant solutions with clean
-            and maintainable code.
-          </p>
+This image shows the interface of an Image Type Classifier application. It allows users to upload an image and classify it into one of five categories: carpenter, restroom, electrical, vending_machine, or plumbing. The title and description clearly explain the purpose, while a file upload option lets users choose an image from their computer. After selecting a file, clicking the Predict button sends the image to the backend, where a trained machine learning model (such as a CNN) processes it and returns the predicted category. This makes the interface simple and effective for real-time image classification.          </p>
         </div>
         <div className="github-button-container">
-          <a href='#' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
+          <a href='https://github.com/ANBUSELVAM-S/image-process.git' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
