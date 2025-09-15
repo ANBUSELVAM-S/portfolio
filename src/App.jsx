@@ -6,7 +6,6 @@ import profilePic from './assets/anbu.jpg';
 import projectpic from './assets/image1.png';
 import projectpic1 from './assets/img.png';
 import upcoming from './assets/image.jpeg';
-import resume from './assets/Resume.pdf';
 import idea from './assets/ideathon.jpg';
 import gaming from './assets/gaming.png';
 import Typewriter from "typewriter-effect"
@@ -32,7 +31,7 @@ function App() {
         <a href="#project">Project</a>
         <a href="#ac">Achievement</a>
         <a href="#con">Contact Me</a>
-        <a href={resume} download="Resume.pdf" className='do' > Resume</a>
+        <a href="/Resume.pdf" download="Resume.pdf" className='do' > Resume</a>
       </div>
     </div>
 
