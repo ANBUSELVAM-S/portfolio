@@ -67,7 +67,7 @@ function App() {
           <p className="hs">
             B.E, Department of Computer Science (2023-2027)<br />
             Bannari Amman Institute of Technology, Sathyamangalam, Erode(Dt).<br/>
-            CCPA : 7.5
+            CCPA : 7.59
 
           </p>
         </div>
