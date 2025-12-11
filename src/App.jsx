@@ -9,7 +9,8 @@ import upcoming from './assets/image.jpeg';
 import idea from './assets/ideathon.jpg';
 import gaming from './assets/gaming.png';
 import Typewriter from "typewriter-effect"
-
+import { VscLiveShare } from "react-icons/vsc";
+import shop from './assets/shop.png';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -135,6 +136,51 @@ function App() {
             </svg>
             Continue with GitHub
           </button></a>
+          
+        </div>
+        <div className="github-button-container">
+          <a href='https://anbuport.netlify.app' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+          <VscLiveShare /> Live Demo
+          </button></a>
+          
+        </div>
+      </div>
+
+       <h2 style={{textAlign:'center',color:' #40c9ff',padding:'1rem'}}>ShopFusion</h2>
+      <div className="project-card">
+        <div className="project-content">
+          <img
+            className="project-image"
+            src={shop}
+            alt="Project"
+          />
+          <p className="project-description">
+            This project is a sleek and responsive e-commerce product showcase built using React.
+It features a modern navigation bar with sections like Home, Favourite, Orders, Cart, and Logout for smooth user flow.
+Each product card displays high-quality images, brand names, pricing, and includes interactive buttons such as Add to Cart and Order Now.
+The layout follows a clean grid structure, providing a visually appealing and user-friendly shopping experience.
+The interface is optimized for clarity, making it easy for users to browse and compare multiple items.
+Overall, this UI demonstrates front-end skills in layout design, component structure, responsiveness, and clean styling.</p>
+        </div>
+        <div className="github-button-container">
+          <a href='https://github.com/ANBUSELVAM-S/Shopfusion.git' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
+              A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
+              2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,
+              1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,
+              2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,
+              4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z" />
+            </svg>
+            Continue with GitHub
+          </button></a>
+          
+        </div>
+        <div className="github-button-container">
+          <a href='https://shopfusion-tau.vercel.app' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+          <VscLiveShare /> Live Demo
+          </button></a>
+          
         </div>
       </div>
       <h2 style={{textAlign:'center',paddingTop:'15px',color:' #40c9ff'}}>Image process</h2>
@@ -160,6 +206,12 @@ This image shows the interface of an Image Type Classifier application. It allow
             </svg>
             Continue with GitHub
           </button></a>
+        </div>
+        <div className="github-button-container">
+          <a href='https://anbuport.netlify.app' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+          <VscLiveShare /> Live Demo
+          </button></a>
+          
         </div>
       </div>
     </div>
