@@ -97,7 +97,7 @@ function App() {
           <h2>Frontend</h2>
           <ul>
             <li>HTML,CSS</li>
-            <li>React,Tailwind css</li>
+            <li>React,UI/UX</li>
             <li>JavaScript  </li>
           </ul>
         </div>
@@ -192,7 +192,7 @@ Overall, this UI demonstrates front-end skills in layout design, component struc
             alt="Project"
           />
           <p className="project-description">
-This image shows the interface of an Image Type Classifier application. It allows users to upload an image and classify it into one of five categories: carpenter, restroom, electrical, vending_machine, or plumbing. The title and description clearly explain the purpose, while a file upload option lets users choose an image from their computer. After selecting a file, clicking the Predict button sends the image to the backend, where a trained machine learning model (such as a CNN) processes it and returns the predicted category. This makes the interface simple and effective for real-time image classification.          </p>
+Developed a full-stack Hostel Fault Management System integrating React.js, Node.js, MySQL, and an ML-based text classification model. Implemented secure user authentication, automated fault categorization, and real-time email notifications for students, staff, and administrators. Designed responsive UI dashboards, ensuring seamless interaction and fault tracking across all user roles. Built and deployed a Flask ML API for category prediction, integrated with backend workflows for automated staff assignment. Ensured system reliability through extensive testing, optimization, and end-to-end documentation.</p>
         </div>
         <div className="github-button-container">
           <a href='https://github.com/ANBUSELVAM-S/image-process.git' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
