@@ -11,6 +11,7 @@ import gaming from './assets/gaming.png';
 import Typewriter from "typewriter-effect"
 import { VscLiveShare } from "react-icons/vsc";
 import shop from './assets/shop.png';
+import task from './assets/task.png';
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -76,7 +77,7 @@ function App() {
           <h2>Higher Education:</h2>
           <p className="hs">
             Seventh-day Adventist Matriculation Higher Secondary School, Sivaganga(Dt).<br/>
-            Grade : 81.3%.
+            Grade : 81.33%.
           </p>
         </div>
       </div>
@@ -183,7 +184,7 @@ Overall, this UI demonstrates front-end skills in layout design, component struc
           
         </div>
       </div>
-      <h2 style={{textAlign:'center',paddingTop:'15px',color:' #40c9ff'}}>Image process</h2>
+      <h2 style={{textAlign:'center',paddingTop:'15px',color:' #40c9ff'}}>Hostel Fault Management System</h2>
       <div className="project-card">
         <div className="project-content">
           <img
@@ -195,7 +196,7 @@ Overall, this UI demonstrates front-end skills in layout design, component struc
 Developed a full-stack Hostel Fault Management System integrating React.js, Node.js, MySQL, and an ML-based text classification model. Implemented secure user authentication, automated fault categorization, and real-time email notifications for students, staff, and administrators. Designed responsive UI dashboards, ensuring seamless interaction and fault tracking across all user roles. Built and deployed a Flask ML API for category prediction, integrated with backend workflows for automated staff assignment. Ensured system reliability through extensive testing, optimization, and end-to-end documentation.</p>
         </div>
         <div className="github-button-container">
-          <a href='https://github.com/ANBUSELVAM-S/image-process.git' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
+          <a href='https://github.com/kpajay-45/hostel-fault-management-system.git' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
             <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
               A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
@@ -208,7 +209,38 @@ Developed a full-stack Hostel Fault Management System integrating React.js, Node
           </button></a>
         </div>
         <div className="github-button-container">
-          <a href='https://anbuport.netlify.app' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+          <a href='' style={{color:'white',textDecoration:'none'}}><button className="github-button">
+          <VscLiveShare /> Live Demo
+          </button></a>
+          
+        </div>
+      </div>
+      <h2 style={{textAlign:'center',paddingTop:'15px',color:' #40c9ff'}}>TaskManager</h2>
+      <div className="project-card">
+        <div className="project-content">
+          <img
+            className="project-image"
+            src={task}
+            alt="Project"
+          />
+          <p className="project-description">
+This Task Management System is a full-stack web application built using React for the frontend and Node.js with Express and MySQL for the backend. It allows users to securely log in, add tasks with date and time, and track them as pending or completed. The dashboard shows total, completed, and pending tasks with visual charts for better understanding. A responsive sidebar with a hamburger menu ensures smooth use on mobile devices. The system stores user data and tasks in a database and fetches them in real time using REST APIs. Overall, it helps users organize, monitor, and manage their daily tasks efficiently.</p>
+        </div>
+        <div className="github-button-container">
+          <a href='https://github.com/ANBUSELVAM-S/TaskManager.git' style={{color:'white',textDecoration:'none'}}><button className="github-button" >
+            <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18
+              A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,
+              2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,
+              1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,
+              2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,
+              4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z" />
+            </svg>
+            Continue with GitHub
+          </button></a>
+        </div>
+        <div className="github-button-container">
+          <a href='' style={{color:'white',textDecoration:'none'}}><button className="github-button">
           <VscLiveShare /> Live Demo
           </button></a>
           
